@@ -1,3 +1,5 @@
 module.exports = {
-  User: require("./user")
+  User: require("./User"),
+  Challenge: require("./challenge"),
+  Upload: require("./Upload"),
 };

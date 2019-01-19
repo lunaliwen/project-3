@@ -1,0 +1,15 @@
+.navbar-brand {
+    color: orange !important;
+    font-size: 72px !important;
+}
+
+.nav-link {
+    color: rgb(85, 71, 71) !important;
+    font-size: 18px !important;
+}
+
+img {
+    height: 300px;
+    width: 400px;
+}
+

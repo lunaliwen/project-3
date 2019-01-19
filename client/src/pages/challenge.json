@@ -1,79 +1,45 @@
-const mongoose = require("mongoose");
-const db = require("../models");
-
-mongoose.connect(
-  process.env.MONGODB_URI ||
-  "mongodb://localhost/project-3"
-);
-
-const userSeed = [
-  {
-    username: "admin",
-    password: "password"
-  },
-  {
-    username: "Eric",
-    password: "supersecurepassword"
-  }
-];
-
-const challengeSeed =[
+[
     {
+      "id": 1,
       "title": "Korean Spicy Noodle Challenge",
       "image": "https://images-na.ssl-images-amazon.com/images/I/91v-8RK1EaL.jpg",
       "description": "In this challenge, you have to eat hot and spicy noodles, it comes with all the risks associated with eating hot food."
     },
     {
+      "id": 2,
       "title": "Cutest Cat Challenge",
       "image": "https://www.readersdigest.ca/wp-content/uploads/sites/14/2011/01/4-ways-cheer-up-depressed-cat.jpg",
       "description":"Who got the cutest cat? Upload your video here."
     },
     {
+      "id": 3,
       "title": "100 Layer Challenge",
       "image": "https://i.ytimg.com/vi/bQEqhJcQ8jE/maxresdefault.jpg",
       "description":"For this, you will need a whole lot of free time and a lot of makeup, clothes, tin foil anything you want really, as it involves you sitting for ages putting layers and layers of anything you want on your body."
     },
     {
+      "id": 4,
       "title": "Condom Challenge",
       "image": "https://i.ytimg.com/vi/YBggW8yR6h8/maxresdefault.jpg",
       "description":"Don’t get any dirty ideas; this challenge is not half as steamy as the chapstick challenge. All you’re doing is filling a condom with water and dropping it on a friends head, it is pretty risky, as your friend could struggle to breathe. Ensure you have other friends on standby in case things go wrong."
     },
     {
+      "id": 5,
       "title": "Ghost Pepper Challenge",
       "image": "https://i.ytimg.com/vi/XJJRJQzl9Yg/maxresdefault.jpg",
       "description":"Eatting the hotest pepper in the world! Be careful though."
     },
     {
+      "id": 6,
       "title": "Cinnamon challenge",
       "image": "http://www.bioedonline.org/BioEd/cache/file/69E57A28-1626-46A6-8BAF19EFE755F576.jpg",
       "description":"This is one of the hardest YouTube challenges. You have to put a spoonful of cinnamon in your mouth and try to keep it in, it looks so easy except that it is not. It is an iincrediblydangerous challenge that can result in permanent lung damage or even death."
     },
     {
+      "id": 7,
       "title": "Baking Soda and Vinegar Challenge",
       "image": "https://i.ytimg.com/vi/kXogQu-b--k/maxresdefault.jpg",
       "description":"The Baking Soda and Vinegar challenge is a dangerous challenge that can lead to death by suffocating. It involves putting a tablespoon of baking soda and a large gulp of vinegar in your mouth at the same time and then you have to try to keep the resulting combination in your mouth for as long as you can."
-    }  
-]
-
-db.User
-  .remove({})
-  .then(() => db.User.collection.insertMany(userSeed))
-  .then(data => {
-    console.log(data.result.n + " records inserted!");
-    db.Challenge
-  .remove({})
-  .then(() => db.Challenge.collection.insertMany(challengeSeed))
-  .then(data => {
-    console.log(data.result.n + " records inserted!");
-    process.exit(0);
-  })
-  .catch(err => {
-    console.error(err);
-    process.exit(1);
-  });
-  })
-  .catch(err => {
-    console.error(err);
-  });
-
-
+    }
+  ]
+  
