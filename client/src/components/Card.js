@@ -2,17 +2,24 @@ import React from "react";
 
 const styles = {
   card: {
-    margin: 20,
-    background: "#e8eaf6",
-    width: 600
+    marginTop: 90,
+    background: "#ffffff",
+    width: "50%",
+    display: "inline-block",
+    boxSizing:"border-box",
+    verticalAlign: "top"
   },
   image: {
-    Height: 250,
-    Width: 250,
-    padding: "0 20px"
+    width: 500,
+    padding: "30px 20px"
   },
   content: {
     padding: 20
+  },
+  heading: {
+    fontFamily: "Georgia",
+    fontSize: 24,
+    fontColor: "#A9A9A9"
   }
 };
 
@@ -24,14 +31,8 @@ const Card = props => (
       </a>
     </div>
     <div style={styles.heading}>
-      <ul>
-        <li>
-          <strong>Title:</strong> {props.title}
-        </li>
-        <li>
-          <strong>Description:</strong> {props.description}
-        </li>
-      </ul>
+          <strong>&nbsp;&nbsp;&nbsp;&nbsp;{props.title}</strong>   
+
     </div>
   </div>
 );

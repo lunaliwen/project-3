@@ -63,7 +63,7 @@ render() {
     </div>
 
 </nav>
-     <div>
+     <div className="container">
      {this.state.challenges.map(challenge => (
           <Card
             id={challenge._id}
@@ -76,7 +76,11 @@ render() {
       
   </div> 
 
+
+   <footer>@ 2019 By Liwen Ma</footer>
+  
     </div>
+
   );
 }
 

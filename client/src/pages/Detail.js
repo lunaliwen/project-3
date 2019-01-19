@@ -92,8 +92,9 @@ class Detail extends Component {
 
                 </nav>
                 <div className="container">
-                    <h1 className="title">Title: {this.state.challenge.title}</h1>
-                    <p>Description: {this.state.challenge.description}</p>
+                    <h1 className="title"><strong>{this.state.challenge.title}</strong></h1>
+                    <br></br>
+                    <h5>&nbsp;&nbsp;&nbsp;&nbsp;{this.state.challenge.description}</h5>
 
                     <div className="user uploads">
              
@@ -104,7 +105,7 @@ class Detail extends Component {
                            
                            this.state.challenge.uploads.map((upload) =>
                               <div>
-                              <li className="list-group-item"><strong>Name:&nbsp;</strong>{upload.user.username} &nbsp;
+                              <li className="list-group-item"><strong>Username:&nbsp;</strong>{upload.user.username} &nbsp;
                               <strong>Link:&nbsp;</strong>
                               <a href= {upload.link}>{upload.link}</a> 
                               <br></br>
@@ -124,7 +125,7 @@ class Detail extends Component {
                     {this.state.loggedIn ? 
                     !this.state.challenge.uploads.some(x => x.user.username == this.state.username) ?
                     <div className = "upload-container">
-                    <h2>Submit your Youtube link below to participate!</h2>
+                  
 
                     <form>
 
@@ -139,13 +140,18 @@ class Detail extends Component {
                             <textarea onChange={this.handleInputChange} className="form-control" id="comment" name="comment" rows="3"></textarea>
                         </div>
 
-
+                        <br></br>
+                        <br></br>
                         <button onClick={this.handleSubmit} type="submit" className="btn btn-primary">Submit</button>
                     </form>
                     </div>
                     :"":""}
 
                 </div>
+
+                
+   <footer>@ 2019 By Liwen Ma</footer>
+
             </div>
         );
     }

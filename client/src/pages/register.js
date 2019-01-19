@@ -102,6 +102,8 @@ class register extends Component {
 
           {this.state.loggedIn ? this.renderRedirect(): null }
         </div>
+
+       
         </div>
     );
   }

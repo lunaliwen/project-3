@@ -16,27 +16,6 @@ class Login extends Component {
     event.preventDefault();
     console.log("login clicked!");
 
-    //axios.get("/login")
-      //.then((response) => {
-        //this.setState({
-          //username: response.data.username,
-          //password: response.data.password
-        //},
-        //console.log(response));
-      //});
-
-    //axios.post("/login")
-      //.then((response) => {
-        //console.log(response);
-        //this.setState({ 
-          //loggedIn: true, 
-          //username: response.data.username,
-          //password: response.data.password });
-      //})
-      //.catch(function (error) {
-        //console.log(error);
-     // })
-    // this.setState({ loggedIn: true});
     console.log(this.state)
     const loginInfo = { username: this.state.username, password: this.state.password }
     axios.post("/login", loginInfo)
@@ -125,10 +104,12 @@ class Login extends Component {
           <br></br>
           <br></br>
           <Link to={'/register'}>
-          <button class="btn btn-primary">New user? Click here!</button>
+          <button className="btn btn-primary">New user? Click here!</button>
           </Link>
 
         </div>
+
+      
         </div>
     );
   }
